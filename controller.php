@@ -21,11 +21,8 @@ class controller
         $this->view = new view();
     }
 
-    public function changeBase($base) {
-        $this->model->base = $base;
-        $this->model->loadJson();
-        $this->model->loadDate();
-        $this->model->loadRates();
+    public function viewTable($base) {
+        $this->model->changeBase($base);
         $this->view->showTable($this->model);
     }
 

@@ -29,6 +29,12 @@ class model
     {
         return $this->$name;
     }
-
+    public function changeBase($base)
+    {
+        $this->base = $base;
+        $this->loadJson();
+        $this->loadDate();
+        $this->loadRates();
+    }
 }
 
